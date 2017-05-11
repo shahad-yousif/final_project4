@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Flights</h1>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr class="info">
+      <th>From airport</th>
+      <th>To airport</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flights.each do |flight| %>
+      <tr>
+        <td><%= flight.from_airport_id  %></td>
+        <td><%= flight.to_airport_id %></td>
+        <td><%= flight.company.date %></td>
+        <td><%= link_to 'Show', flight ,class:"btn btn-info" %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flight', new_flight_path,class:"btn btn-info" %>
