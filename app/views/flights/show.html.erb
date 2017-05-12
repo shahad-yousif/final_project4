@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From airport:</strong>
+  <%= @flight.from_airport.full_airport_name %>
+</p>
+
+<p>
+  <strong>To airport:</strong>
+  <%= @flight.to_airport.full_airport_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @flight.company.date %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @flight.company.price %>
+</p>
+
+<%= link_to 'Edit', edit_flight_path(@flight) %> |
+<%= link_to 'Back', flights_path %>
+<br>
+<%= link_to 'New Booking', new_booking_path %>

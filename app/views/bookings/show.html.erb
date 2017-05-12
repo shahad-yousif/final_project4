@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @booking.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @booking.last_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @booking.gender %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @booking.date_of_birth %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @booking.nationality %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @booking.country %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @booking.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @booking.email %>
+</p>
+
+<p>
+  <strong>Booking type:</strong>
+  <%= @booking.booking_type %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
