@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @airportloc.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @airportloc.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @airportloc.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_airportloc_path(@airportloc) %> |
+<%= link_to 'Back', airportlocs_path %>

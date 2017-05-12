@@ -18,7 +18,7 @@ class AirportsControllerTest < ActionController::TestCase
 
   test "should create airport" do
     assert_difference('Airport.count') do
-      post :create, airport: { address: @airport.address, code: @airport.code, latitude: @airport.latitude, longitude: @airport.longitude }
+      post :create, airport: { city: @airport.city, code: @airport.code }
     end
 
     assert_redirected_to airport_path(assigns(:airport))
@@ -35,7 +35,7 @@ class AirportsControllerTest < ActionController::TestCase
   end
 
   test "should update airport" do
-    patch :update, id: @airport, airport: { address: @airport.address, code: @airport.code, latitude: @airport.latitude, longitude: @airport.longitude }
+    patch :update, id: @airport, airport: { city: @airport.city, code: @airport.code }
     assert_redirected_to airport_path(assigns(:airport))
   end
 

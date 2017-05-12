@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :from_airport %><br>
-    <%= f.collection_select :from_airport_id, Airport.order(:address),:id,:address  %>
+    <%= f.collection_select :from_airport_id, Airport.order(:city),:id,:city  %>
   </div>
   <div class="field">
     <%= f.label :to_airport %><br>
-    <%= f.collection_select :to_airport_id, Airport.order(:address),:id,:address  %>
+    <%= f.collection_select :to_airport_id, Airport.order(:city),:id,:city  %>
   </div>
   <div class="field">
     <%= f.label :date %><br>

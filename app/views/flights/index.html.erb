@@ -6,7 +6,10 @@
   <thead>
     <tr class="info">
       <th>From airport</th>
+      
       <th>To airport</th>
+      
+      
       <th>Date</th>
       <th colspan="3"></th>
     </tr>
@@ -15,10 +18,13 @@
   <tbody>
     <% @flights.each do |flight| %>
       <tr>
-        <td><%= flight.from_airport_id  %></td>
-        <td><%= flight.to_airport_id %></td>
+        <td><%= flight.from_airport.full_airport_name %></td>
+        
+        <td><%= flight.to_airport.full_airport_name %></td>
+        
         <td><%= flight.company.date %></td>
         <td><%= link_to 'Show', flight ,class:"btn btn-info" %></td>
+        
        
       </tr>
     <% end %>
@@ -28,3 +34,4 @@
 <br>
 
 <%= link_to 'New Flight', new_flight_path,class:"btn btn-info" %>
+<%= link_to 'airportlocation', airportlocs_path %>

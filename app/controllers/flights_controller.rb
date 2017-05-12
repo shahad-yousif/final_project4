@@ -14,7 +14,7 @@ class FlightsController < ApplicationController
 
   # GET /flights/new
   def new
-    @flight = current_user.flights.build
+    @flight = Flight.new
   end
 
   # GET /flights/1/edit
@@ -24,7 +24,7 @@ class FlightsController < ApplicationController
   # POST /flights
   # POST /flights.json
   def create
-    @flight = current_user.flights.build(flight_params)
+    @flight = Flight.new(flight_params)
 
     respond_to do |format|
       if @flight.save

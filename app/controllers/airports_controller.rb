@@ -69,6 +69,6 @@ class AirportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def airport_params
-      params.require(:airport).permit(:address, :code, :latitude, :longitude)
+      params.require(:airport).permit(:city, :code)
     end
 end
